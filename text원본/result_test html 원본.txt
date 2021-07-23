@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>추천 결과</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<style>
+  img {
+        width: 120px;
+        height: 170px;
+      }
+      .poster{
+        float: left;
+      }
+      .content{
+        float: right;
+      }
+   </style>
+
+<body>
+  <div class="row">
+    <div class="col-3 movie-left">
+    </div>
+    <div class="col-6">
+      <br><br><br>
+      <div class="title">
+        <h1> 이런 영화는 어떠세요?
+          <hr>
+        </h1>
+      </div>
+      <br>
+
+      <div class="result-form">
+        <div class="form-group">
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[0].split("> ")[1].split(")")[0]}}).jpg" alt="{{result[0].split(">")[1].split(")")[0]}}).jpg">
+            {{result[0].split("> ")[1].split(")")[0]}})</h2><br>
+          <p style="margin-left: 17px">{{result[0].split("> ")[1].split(")")[1].split("(")[1]}} {{result[1]}}</p>
+          <hr>
+          <p style="font=size:12px">{{result[2]}}</p>
+          <span style="font-size:11px">"{{result[3]}}"</span><br>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[5].split("> ")[1].split(")")[0]}}).jpg" alt="{{result[5].split(">")[1].split(")")[0]}}).jpg">
+            {{result[5].split("> ")[1].split(")")[0]}})</h2><br>
+          <p style="margin-left: 17px">{{result[5].split("> ")[1].split(")")[1].split("(")[1]}} {{result[6]}}</p>
+          <hr>
+          <p style="font=size:12px">{{result[7]}}</p>
+          <span style="font-size:11px">"{{result[8]}}"</span><br>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[10].split("> ")[1].split(")")[0]}}).jpg" alt="{{result[10].split(">")[1].split(")")[0]}}).jpg">
+            {{result[10].split("> ")[1].split(")")[0]}})</h2><br>
+          <p style="margin-left: 17px">{{result[10].split("> ")[1].split(")")[1].split("(")[1]}} {{result[11]}}</p>
+          <hr>
+          <p style="font=size:12px">{{result[12]}}</p>
+          <span style="font-size:11px">"{{result[13]}}"</span><br>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[15].split("> ")[1].split(")")[0]}}).jpg" alt="{{result[15].split(">")[1].split(")")[0]}}).jpg">
+            {{result[15].split("> ")[1].split(")")[0]}})</h2><br>
+          <p style="margin-left: 17px">{{result[15].split("> ")[1].split(")")[1].split("(")[1]}}   {{result[16]}}</p>
+          <hr>
+          <p style="font=size:12px">{{result[17]}}</p>
+          <span style="font-size:11px">"{{result[18]}}"</span><br>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[20].split("> ")[1].split(")")[0]}}).jpg" alt="{{result[20].split(">")[1].split(")")[0]}}).jpg">
+            {{result[20].split("> ")[1].split(")")[0]}})</h2><br>
+          <p style="margin-left: 17px">{{result[20].split("> ")[1].split(")")[1].split("(")[1]}} {{result[21]}}</p>
+          <hr>
+          <p style="font=size:12px">{{result[22]}}</p>
+          <span style="font-size:11px">"{{result[23]}}"</span><br>
+          <hr>
+          <br>
+
+
+
+          <button type="button" class="btn btn-secondary btn-block" onclick="location.href='http://localhost:5000/' " style="width:50%; margin:auto;">검색 페이지로</button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

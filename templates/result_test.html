@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>추천 결과</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<style>
+  img {
+        width: 120px;
+        height: 170px;
+      }
+      .poster{
+        float: left;
+      }
+      .content{
+        float: right;
+      }
+   </style>
+
+<body>
+  <div class="row">
+    <div class="col-2 movie-left">
+    </div>
+    <div class="col-7">
+      <br><br><br>
+      <div class="title">
+        <h1> 이런 영화는 어떠세요?
+          <hr>
+        </h1>
+      </div>
+      <br>
+
+      <div class="result-form">
+        <div class="form-group">
+          <b style="text-align:center">이 Query(영화)의 분석 결과:</b><br>
+          <b>{{result[30]}}</b><br>
+          {{result[31]}}<hr>
+          <br>
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[0]}}.jpg" alt="{{result[0]}}">
+            {{result[0]}}</h2><br>
+          <p style="margin-left: 17px"><b>유사도 :</b> {{result[1]}}  <b>네이버 평점 : </b>{{result[2]}}</p>
+          <hr>
+          <span style="font-size:14px">"{{result[3]}}"</span><br><br>
+          <br><b><p>전문가의 리뷰로 분석한 영화의 특징</p></b>
+          <p>[{{result[4]}}]</p>
+          <p>[{{result[5]}}]</p>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[6]}}.jpg" alt="{{result[6]}}">
+            {{result[6]}}</h2><br>
+          <p style="margin-left: 17px"><b>유사도 :</b> {{result[7]}}  <b>네이버 평점 : </b>{{result[8]}}</p>
+          <hr>
+          <span style="font-size:14px">"{{result[9]}}"</span><br>
+          <br><b><p>전문가의 리뷰로 분석한 영화의 특징</p></b>
+          <p>[{{result[10]}}]</p>
+          <p>[{{result[11]}}]</p>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[12]}}.jpg" alt="{{result[12]}}">
+            {{result[12]}}</h2><br>
+          <p style="margin-left: 17px"><b>유사도 :</b> {{result[13]}}  <b>네이버 평점 : </b>{{result[14]}}</p>
+          <hr>
+          <span style="font-size:14px">"{{result[15]}}"</span><br>
+          <br><b><p>전문가의 리뷰로 분석한 영화의 특징</p></b>
+          <p>[{{result[16]}}]</p>
+          <p>[{{result[17]}}]</p>
+          <hr>
+          <br>
+
+          <h2 style="margin-left:15px">
+            <img src="static/poster/{{result[18]}}.jpg" alt="{{result[18]}}">
+            {{result[18]}}</h2><br>
+          <p style="margin-left: 17px"><b>유사도 :</b> {{result[19]}}  <b>네이버 평점 : </b>{{result[20]}}</p>
+          <hr>
+          <span style="font-size:14px">"{{result[21]}}"</span><br>
+          <br><b><p>전문가의 리뷰로 분석한 영화의 특징</p></b>
+          <p>[{{result[22]}}]</p>
+          <p>[{{result[23]}}]</p>
+          <hr>
+          <br>
+
+
+
+
+
+          <button type="button" class="btn btn-secondary btn-block" onclick="location.href='http://localhost:5000/' " style="width:50%; margin:auto;">검색 페이지로</button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
